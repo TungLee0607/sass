@@ -1,0 +1,97 @@
+.banner {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    &__left {
+        width: 50%;
+        display: flex;
+        
+        gap: 20px;
+        flex-direction: column;
+        p {
+            max-width: 500px;
+        }
+
+        &-input {
+            @include flex(center, space-between);
+            border: 1px solid $green;
+            border-radius: 14px;
+            margin: 10px 0;
+            input {
+                width: 100%;
+                padding: 12px 30px 12px 12px;
+                font-size: 16px;
+                font-weight: 500;
+                &::placeholder {
+                    color: #B1B1B1;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+            .btn {
+                border-radius: 0 12px 12px 0;
+                position: relative;
+                
+                .input-icon {
+                    position: absolute;
+                    left: -25px;
+                    top: 53%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+
+    &__right {
+        width: 50%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.food-near-me {
+    margin-top: 2rem;
+    &-title {
+        @include flexSB;
+        .title-icon {
+            display: flex;
+            gap: 1rem;
+        }
+        .icon-previous {
+            border-radius: 50%;
+            background-color: $bg-item;
+            padding: 10px 16px;
+            &.next {
+                background-color: $bg-button;
+            }
+        }
+    }
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+    &-item {
+        @include flex(center, space-between);
+        width: 25%;
+        gap: 1rem;
+        background-color: $bg-item;
+        border-radius: 24px;
+        &-content {
+            padding-left: 1.5rem;
+            h5 {
+                margin-bottom: 1rem;
+            }
+        }
+        &-image {
+            margin-top: -1.5rem;
+            img {
+                width: 90%;
+            }
+        }
+    }
+}

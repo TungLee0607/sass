@@ -1,0 +1,43 @@
+@mixin buttonIcon {
+    padding: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    @include flexCenter;
+}
+
+@mixin flex($align, $justify) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexSB {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// Responsive
+@mixin PC {
+    @media (max-width: #{$desktop-width}) {
+      @content;
+    }
+}
+
+@mixin Tablet {
+    @media (max-width: #{$tablet-width}) {
+      @content;
+    }
+}
+
+@mixin Mobile {
+    @media (max-width: #{$tablet-width}) {
+      @content;
+    }
+}

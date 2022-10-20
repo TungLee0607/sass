@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: $text-darker;
+    font-weight: 500;
+    transition: $smooth;
+    &:hover, &.active {
+        color: $orange;
+    }
+}
+
+button, input {
+    border: 0;
+    outline: none;
+}
+
+h1 {
+    font-size: 56px;
+    color: $text-darker;
+}
+
+h2 {
+    font-size: 40px;
+    color: $orange;
+    font-family: 'Seaweed Script', cursive;
+}
+
+h3 {
+    font-size: 32px;
+    color: $text-darker;
+}
+h4 {
+    font-size: 28px;
+    font-weight: 500;
+    color: #C7C7C7;
+}
+h5 {
+    font-size: 24px;
+    font-weight: 700;
+    color: $text-darker;
+}
+h6 {
+    font-size: 20px;
+    font-weight: 500;
+    color: $text-grayer;
+}
+
+span {
+    color: $orange;
+    cursor: pointer;
+    transform: $smooth;
+    &:hover {
+        text-decoration: underline;
+
+    }
+}
+
+p {
+    color: $text-dark;
+    font-size: 16px;
+}
+
+.container {
+    max-width: $desktop-width;
+    margin: 0 auto;
+    @include PC {
+        padding: 0 4rem; 
+    }
+    @include Tablet {
+        padding: 0 2rem; 
+    }
+    @include Mobile {
+        padding: 0 10px; 
+    }
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 20px;
+    padding: 12px;
+    background-color: $green;
+    border-radius: 16px;
+    cursor: pointer;
+    .btn-text {
+        color: $text-white;
+        font-weight: 500;
+    }
+    .btn-icon {
+        @include buttonIcon;
+        background-color: white;
+        padding: 12px 14px;
+    }
+    &.orange {
+        background-color: $orange;
+    }
+    &.yellow {
+        background-color: $yellow;
+    }
+}

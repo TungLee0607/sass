@@ -1,0 +1,33 @@
+.footer {
+    padding: 4rem 0;
+    background-color: #F8F8F8;
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        &-icon {
+            display: flex;
+            gap: 16px;
+        }
+        .footer__icon {
+            @include buttonIcon;
+            background-color: black;
+            border-radius: 8px;
+            width: 34px;
+        }
+    }
+    &__right {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        &-item {
+            p {
+                margin-top: 16px;
+            }
+        }
+    }
+}
